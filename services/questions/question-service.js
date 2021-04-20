@@ -1,3 +1,23 @@
+const questionsDao = require('../../daos/question-dao')
+
+
+const findAllQuestions = () =>
+    questionsDao.findAllQuestions();
+
+const findQuestionById = (qid) =>
+    questionsDao.findQuestionById(qid);
+
+const findQuestionsForQuiz = (qid) =>
+    questionsDao.findQuestionsForQuiz(qid);
+
+module.exports = {
+    findAllQuestions,
+    findQuestionById,
+    findQuestionsForQuiz
+}
+
+// This part was for A7
+/*
 const questions = require('./question.json')
 
 const createQuestion = () => {}
@@ -25,3 +45,4 @@ module.exports = {
     deleteQuestion, createQuestionForQuiz,
     findQuestionById
 }
+ */
